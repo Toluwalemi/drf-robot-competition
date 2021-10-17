@@ -34,16 +34,16 @@ class Commander(models.Model):
     MALE = 'M'
     FEMALE = 'F'
     GENDER_CHOICES = (
-        (MALE, 'MALE'),
+        (MALE, 'Male'),
         (FEMALE, 'Female'),
     )
     name = models.CharField(max_length=150, blank=False, default='')
     gender = models.CharField(
         max_length=2,
         choices=GENDER_CHOICES,
-        default=MALE
+        default=MALE,
     )
-    races_count = models.IntegerField
+    races_count = models.IntegerField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

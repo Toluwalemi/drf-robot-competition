@@ -1,5 +1,7 @@
 # Create your views here.
 from rest_framework import generics, permissions
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 
@@ -58,12 +60,16 @@ class CommanderList(generics.ListCreateAPIView):
     filter_fields = ('name', 'gender', 'races_count',)
     search_fields = ('^name',)
     ordering_fields = ('name', 'races_count',)
+    # authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
 
 
 class CommanderDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Commander.objects.all()
     serializer_class = CommanderSerializer
     name = 'commander-detail'
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
 
 
 class CompetitionList(generics.ListCreateAPIView):

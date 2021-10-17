@@ -3,6 +3,7 @@ from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 
+from api.helpers.custom_competition_filter import CompetitionFilter
 from api.models import RobotCategory, Robot, Commander, Competition
 from api.serializers import RobotCategorySerializer, RobotSerializer, CommanderSerializer, \
     CommanderCompetitionSerializer
@@ -12,6 +13,9 @@ class RobotCategoryList(generics.ListCreateAPIView):
     queryset = RobotCategory.objects.all()
     serializer_class = RobotCategorySerializer
     name = 'robotcategory-list'
+    filter_fields = ('name',)
+    search_fields = ('^name',)
+    ordering_fields = ('name',)
 
 
 class RobotCategoryDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -24,6 +28,9 @@ class RobotList(generics.ListCreateAPIView):
     queryset = Robot.objects.all()
     serializer_class = RobotSerializer
     name = 'robot-list'
+    filter_fields = ('name', 'robot_category', 'manufacturing_date', 'has_it_competed',)
+    search_fields = ('^name',)
+    ordering_fields = ('name', 'manufacturing_date',)
 
 
 class RobotDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -36,6 +43,9 @@ class CommanderList(generics.ListCreateAPIView):
     queryset = Commander.objects.all()
     serializer_class = CommanderSerializer
     name = 'commander-list'
+    filter_fields = ('name', 'gender', 'races_count',)
+    search_fields = ('^name',)
+    ordering_fields = ('name', 'races_count',)
 
 
 class CommanderDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -48,6 +58,8 @@ class CompetitionList(generics.ListCreateAPIView):
     queryset = Competition.objects.all()
     serializer_class = CommanderCompetitionSerializer
     name = 'competition-list'
+    filter_class = CompetitionFilter
+    ordering_fields = ('distance_in_feet', 'distance_achievement_date',)
 
 
 class CompetitionDetail(generics.RetrieveUpdateDestroyAPIView):

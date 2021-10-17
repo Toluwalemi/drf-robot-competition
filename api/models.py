@@ -20,6 +20,7 @@ class Robot(models.Model):
     robot_category = models.ForeignKey(RobotCategory, related_name='robots', on_delete=models.CASCADE)
     manufacturing_date = models.DateTimeField()
     has_it_competed = models.BooleanField(default=False)
+    owner = models.ForeignKey('auth.User', related_name='robots', on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

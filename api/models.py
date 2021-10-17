@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class RobotCategory(models.Model):
-    name = models.CharField(max_length=250)
+    name = models.CharField(max_length=250, unique=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
@@ -16,7 +16,7 @@ class RobotCategory(models.Model):
 
 
 class Robot(models.Model):
-    name = models.CharField(max_length=250)
+    name = models.CharField(max_length=250, unique=True)
     robot_category = models.ForeignKey(RobotCategory, related_name='robots', on_delete=models.CASCADE)
     manufacturing_date = models.DateTimeField()
     has_it_competed = models.BooleanField(default=False)
@@ -37,7 +37,7 @@ class Commander(models.Model):
         (MALE, 'Male'),
         (FEMALE, 'Female'),
     )
-    name = models.CharField(max_length=150, blank=False, default='')
+    name = models.CharField(max_length=150, blank=False, unique=True)
     gender = models.CharField(
         max_length=2,
         choices=GENDER_CHOICES,

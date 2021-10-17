@@ -1,5 +1,7 @@
 # Create your views here.
 from rest_framework import generics
+from rest_framework.response import Response
+from rest_framework.reverse import reverse
 
 from api.models import RobotCategory, Robot, Commander, Competition
 from api.serializers import RobotCategorySerializer, RobotSerializer, CommanderSerializer, \
@@ -52,3 +54,16 @@ class CompetitionDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Competition.objects.all()
     serializer_class = CommanderCompetitionSerializer
     name = 'competition-detail'
+
+
+class ApiRoot(generics.GenericAPIView):
+    name = 'api-root'
+
+    def get(self, request, *args, **kwargs):
+        return Response({
+            'robot-categories': reverse(RobotCategoryList.name, request=request),
+            'robots': reverse(RobotList.name, request=request),
+            'commanders': reverse(CommanderList.name, request=request),
+            'competitions': reverse(CommanderList.name, request=request)
+
+        })

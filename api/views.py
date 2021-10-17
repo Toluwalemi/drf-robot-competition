@@ -1,8 +1,9 @@
 # Create your views here.
-from rest_framework import generics
+from rest_framework import generics, permissions
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 
+from api.helpers import custompermission
 from api.helpers.custom_competition_filter import CompetitionFilter
 from api.models import RobotCategory, Robot, Commander, Competition
 from api.serializers import RobotCategorySerializer, RobotSerializer, CommanderSerializer, \
@@ -31,12 +32,23 @@ class RobotList(generics.ListCreateAPIView):
     filter_fields = ('name', 'robot_category', 'manufacturing_date', 'has_it_competed',)
     search_fields = ('^name',)
     ordering_fields = ('name', 'manufacturing_date',)
+    permission_classes = (
+        permissions.IsAuthenticatedOrReadOnly,
+        custompermission.IsCurrentUserOwnerOrReadOnly,
+    )
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 
 class RobotDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Robot.objects.all()
     serializer_class = RobotSerializer
     name = 'robot-detail'
+    permission_classes = (
+        permissions.IsAuthenticatedOrReadOnly,
+        custompermission.IsCurrentUserOwnerOrReadOnly,
+    )
 
 
 class CommanderList(generics.ListCreateAPIView):

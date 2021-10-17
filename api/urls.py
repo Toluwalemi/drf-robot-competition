@@ -11,7 +11,7 @@ urlpatterns = [
     path('commanders/', CommanderList.as_view(), name=CommanderList.name),
     path('commanders/<int:pk>)/', CommanderDetail.as_view(), name=CommanderDetail.name),
     path('competitions/', CompetitionList.as_view(), name=CompetitionList.name),
-    path('competitions/<int:pk>)/', CompetitionDetail.as_view(), name=CompetitionDetail.name),
+    path('competitions/<int:pk>/', CompetitionDetail.as_view(), name=CompetitionDetail.name),
     path('', ApiRoot.as_view(), name=ApiRoot.name),
 
 ]

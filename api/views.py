@@ -29,7 +29,7 @@ class RobotList(generics.ListCreateAPIView):
 class RobotDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Robot.objects.all()
     serializer_class = RobotSerializer
-    name = 'robot-list'
+    name = 'robot-detail'
 
 
 class CommanderList(generics.ListCreateAPIView):
@@ -41,7 +41,7 @@ class CommanderList(generics.ListCreateAPIView):
 class CommanderDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Commander.objects.all()
     serializer_class = CommanderSerializer
-    name = 'pilot-detail'
+    name = 'commander-detail'
 
 
 class CompetitionList(generics.ListCreateAPIView):
@@ -64,5 +64,5 @@ class ApiRoot(generics.GenericAPIView):
             'robot-categories': reverse(RobotCategoryList.name, request=request),
             'robots': reverse(RobotList.name, request=request),
             'commanders': reverse(CommanderList.name, request=request),
-            'competitions': reverse(CommanderList.name, request=request)
+            'competitions': reverse(CompetitionList.name, request=request)
         })

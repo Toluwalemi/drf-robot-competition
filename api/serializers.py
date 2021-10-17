@@ -4,10 +4,10 @@ from api.models import RobotCategory, Robot, Competition, Commander
 
 
 class RobotCategorySerializer(serializers.HyperlinkedModelSerializer):
-    robot = serializers.HyperlinkedRelatedField(
+    robots = serializers.HyperlinkedRelatedField(
         many=True,
         read_only=True,
-        view_name='drone-detail'
+        view_name='robot-detail'
     )
 
     class Meta:
@@ -23,7 +23,7 @@ class RobotSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Robot
         fields = ('url', 'name', 'robot_category',
-                  'manufacturing_date', 'has_it_completed', 'created')
+                  'manufacturing_date', 'has_it_competed', 'created')
 
 
 class CompetitionSerializer(serializers.HyperlinkedModelSerializer):

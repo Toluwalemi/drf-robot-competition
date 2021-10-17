@@ -1,6 +1,21 @@
+from django.contrib.auth.models import User
 from rest_framework import serializers
 
 from api.models import RobotCategory, Robot, Competition, Commander
+
+
+class UserRobotSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Robot
+        fields = ('url', 'name')
+
+
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    robots = UserRobotSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = User
+        fields = ('url', 'pk', 'username', 'robot')
 
 
 class RobotCategorySerializer(serializers.HyperlinkedModelSerializer):
@@ -19,10 +34,12 @@ class RobotSerializer(serializers.HyperlinkedModelSerializer):
     # display the category name
     robot_category = serializers.SlugRelatedField(queryset=RobotCategory.objects.all(),
                                                   slug_field='name')
+    # display username
+    owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
         model = Robot
-        fields = ('url', 'name', 'robot_category',
+        fields = ('url', 'name', 'robot_category', 'owner',
                   'manufacturing_date', 'has_it_competed', 'created')
 
 

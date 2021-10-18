@@ -4,6 +4,7 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
+from rest_framework.throttling import ScopedRateThrottle
 
 from api.helpers import custompermission
 from api.helpers.custom_competition_filter import CompetitionFilter
@@ -28,6 +29,8 @@ class RobotCategoryDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class RobotList(generics.ListCreateAPIView):
+    throttle_scope = 'robots'
+    throttle_classes = (ScopedRateThrottle,)
     queryset = Robot.objects.all()
     serializer_class = RobotSerializer
     name = 'robot-list'
@@ -44,6 +47,8 @@ class RobotList(generics.ListCreateAPIView):
 
 
 class RobotDetail(generics.RetrieveUpdateDestroyAPIView):
+    throttle_scope = 'robots'
+    throttle_classes = (ScopedRateThrottle,)
     queryset = Robot.objects.all()
     serializer_class = RobotSerializer
     name = 'robot-detail'
@@ -54,17 +59,21 @@ class RobotDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class CommanderList(generics.ListCreateAPIView):
+    throttle_scope = 'commanders'
+    throttle_classes = (ScopedRateThrottle,)
     queryset = Commander.objects.all()
     serializer_class = CommanderSerializer
     name = 'commander-list'
     filter_fields = ('name', 'gender', 'races_count',)
     search_fields = ('^name',)
     ordering_fields = ('name', 'races_count',)
-    # authentication_classes = (TokenAuthentication,)
+    authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)
 
 
 class CommanderDetail(generics.RetrieveUpdateDestroyAPIView):
+    throttle_scope = 'commanders'
+    throttle_classes = (ScopedRateThrottle,)
     queryset = Commander.objects.all()
     serializer_class = CommanderSerializer
     name = 'commander-detail'

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'api',
     'django_filters',
-    'rest_framework.authtoken', # token authentication
+    'rest_framework.authtoken',  # token authentication
 ]
 
 MIDDLEWARE = [
@@ -133,5 +133,15 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-    )
+    ),
+    'DEAULT_THROTTLE_CLASSES': (
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '3/hour',
+        'user': '10/hour',
+        'robots': '20/hour',
+        'commanders': '15/hour',
+    }
 }

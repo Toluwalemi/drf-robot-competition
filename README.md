@@ -42,11 +42,31 @@ grouped into robot categories.
 |/competitions/:id/         |    DELETE    |     DELETE  | delete a competition
 ```
 
-## Requirements
+## General Usage
 
-```text
-djangorestframework==3.12.4
-Django==3.2.8
-pytest-django==4.4.0
-pytest==6.2.4
+* Clone the repository
+* Create a virtual environment in the folder. (If you are on linux, use the command below):
+```bash
+ python3.9 -m venv venv
+```
+* Activate the virtual environment (If you are on linux, use the command below):
+```bash
+ source venv/bin/activate
+```
+* Install the requirements:
+```bash
+ pip install -r requirements.txt
+```
+* Make migrations:
+```bash
+ python manage.py makemigrations api
+ python manage.py migrate
+```
+* Run the command below to run the tests
+```
+ pytest
+```
+* Run the DJANGO's server and access the endpoints
+```
+ python manage.py runserver
 ```

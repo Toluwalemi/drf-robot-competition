@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-0_dxj12th19^2!
 
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['robot-competition.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['robot-competition.herokuapp.com', '*robot-competition.herokuapp.com', '127.0.0.1']
 
 # Application definition
 

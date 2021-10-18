@@ -139,10 +139,10 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle',
     ),
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '3/hour',
-        'user': '10/hour',
-        'robots': '20/hour',
-        'commanders': '15/hour',
+        'anon': '300/hour',
+        'user': '100/hour',
+        'robots': '200/hour',
+        'commanders': '150/hour',
     },
     'DEFAULT_VERSIONING_CLASS':
         'rest_framework.versioning.NamespaceVersioning',

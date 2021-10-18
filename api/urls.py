@@ -3,6 +3,8 @@ from django.urls import path
 from .views import RobotCategoryList, RobotCategoryDetail, RobotList, RobotDetail, CommanderList, CommanderDetail, \
     CompetitionList, CompetitionDetail, ApiRoot
 
+app_name = 'v1'
+
 urlpatterns = [
     path('robot-categories/', RobotCategoryList.as_view(), name=RobotCategoryList.name),
     path('robot-categories/<int:pk>/', RobotCategoryDetail.as_view(), name=RobotCategoryDetail.name),

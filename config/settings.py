@@ -143,5 +143,7 @@ REST_FRAMEWORK = {
         'user': '10/hour',
         'robots': '20/hour',
         'commanders': '15/hour',
-    }
+    },
+    'DEFAULT_VERSIONING_CLASS':
+        'rest_framework.versioning.NamespaceVersioning',
 }

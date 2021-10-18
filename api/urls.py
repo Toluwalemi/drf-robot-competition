@@ -16,4 +16,5 @@ urlpatterns = [
     path('competitions/<int:pk>/', CompetitionDetail.as_view(), name=CompetitionDetail.name),
     path('', ApiRoot.as_view(), name=ApiRoot.name),
 
+
 ]

@@ -21,5 +21,5 @@ urlpatterns = [
     path('api/v1/', include('api.urls', namespace='v1')),
     path('api/v2/', include('api.v2.urls', namespace='v2')),
     path('v1/api-auth/', include('rest_framework.urls', namespace='rest_framework.urls')),
-    path('v2/api-auth/', include('rest_framework.urls', namespace='rest_framework.urls')),
+
 ]

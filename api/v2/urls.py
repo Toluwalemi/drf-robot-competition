@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 
 from api.v2.views import ApiRootVersion2
 from api.views import RobotCategoryList, RobotCategoryDetail, RobotList, RobotDetail, CommanderList, CommanderDetail, \
@@ -16,5 +16,6 @@ urlpatterns = [
     path('competitions/', CompetitionList.as_view(), name=CompetitionList.name),
     path('competitions/<int:pk>/', CompetitionDetail.as_view(), name=CompetitionDetail.name),
     path('', ApiRootVersion2.as_view(), name=ApiRootVersion2.name),
+    path('v2/api-auth/', include('rest_framework.urls', namespace='rest_framework.urls')),
 
 ]

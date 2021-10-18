@@ -1,1 +1,939 @@
-[{"model": "sessions.session", "pk": "ph8wz5rq2r64gta2sdeluy269zrudngh", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2hBgwAGX7nsGMgNEqgaS0q6Md9cmXej2v_f-S0Ta1hq3UZY4Z3ERWpx-N6b0KG0H-U7t1mXqbV1mlrsiDzrk1HN5Xg_376DSqN-aKbAp2QajnPXBQtEGQXsE7xxYyx4LONIcADUmz4jIKShmsEzqLN4ftGg2uQ:1mcQW5:FdnJXDALofhqNntSrqwIbRZkGbNzoMg1jwOa_ZVYd9Q", "expire_date": "2021-11-01T11:09:17.519Z"}}]
+[
+  {
+    "model": "api.robotcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Humanoid",
+      "created": "2021-10-17T15:23:11.616Z",
+      "updated": "2021-10-17T15:23:11.617Z"
+    }
+  },
+  {
+    "model": "api.robotcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Autonomous",
+      "created": "2021-10-17T15:25:33.749Z",
+      "updated": "2021-10-17T15:25:33.749Z"
+    }
+  },
+  {
+    "model": "api.robotcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Teleoperated",
+      "created": "2021-10-17T15:25:54.447Z",
+      "updated": "2021-10-17T15:25:54.447Z"
+    }
+  },
+  {
+    "model": "api.robotcategory",
+    "pk": 4,
+    "fields": {
+      "name": "Augmenting",
+      "created": "2021-10-17T15:26:19.373Z",
+      "updated": "2021-10-17T15:26:19.373Z"
+    }
+  },
+  {
+    "model": "api.robotcategory",
+    "pk": 5,
+    "fields": {
+      "name": "Delta",
+      "created": "2021-10-17T15:26:41.914Z",
+      "updated": "2021-10-17T15:26:41.914Z"
+    }
+  },
+  {
+    "model": "api.commander",
+    "pk": 1,
+    "fields": {
+      "name": "Grayson Atanda",
+      "gender": "M",
+      "races_count": 0,
+      "created": "2021-10-17T15:50:57.574Z",
+      "updated": "2021-10-17T15:50:57.574Z"
+    }
+  },
+  {
+    "model": "api.commander",
+    "pk": 2,
+    "fields": {
+      "name": "Katrina Busari",
+      "gender": "F",
+      "races_count": 0,
+      "created": "2021-10-17T15:51:36.056Z",
+      "updated": "2021-10-17T15:51:36.056Z"
+    }
+  },
+  {
+    "model": "api.competition",
+    "pk": 1,
+    "fields": {
+      "commander": 1,
+      "robot": 6,
+      "distance_in_feet": 1000,
+      "distance_achievement_date": "2021-10-17T16:53:00Z",
+      "created": "2021-10-17T15:53:54.516Z",
+      "updated": "2021-10-17T15:53:54.516Z"
+    }
+  },
+  {
+    "model": "api.competition",
+    "pk": 2,
+    "fields": {
+      "commander": 2,
+      "robot": 7,
+      "distance_in_feet": 24000,
+      "distance_achievement_date": "2021-10-07T16:53:00Z",
+      "created": "2021-10-17T15:54:18.733Z",
+      "updated": "2021-10-17T15:54:18.733Z"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": [
+        "admin",
+        "logentry"
+      ],
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": [
+        "admin",
+        "logentry"
+      ],
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": [
+        "admin",
+        "logentry"
+      ],
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": [
+        "admin",
+        "logentry"
+      ],
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add permission",
+      "content_type": [
+        "auth",
+        "permission"
+      ],
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change permission",
+      "content_type": [
+        "auth",
+        "permission"
+      ],
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": [
+        "auth",
+        "permission"
+      ],
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view permission",
+      "content_type": [
+        "auth",
+        "permission"
+      ],
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add group",
+      "content_type": [
+        "auth",
+        "group"
+      ],
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change group",
+      "content_type": [
+        "auth",
+        "group"
+      ],
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete group",
+      "content_type": [
+        "auth",
+        "group"
+      ],
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view group",
+      "content_type": [
+        "auth",
+        "group"
+      ],
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add user",
+      "content_type": [
+        "auth",
+        "user"
+      ],
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change user",
+      "content_type": [
+        "auth",
+        "user"
+      ],
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete user",
+      "content_type": [
+        "auth",
+        "user"
+      ],
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view user",
+      "content_type": [
+        "auth",
+        "user"
+      ],
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add content type",
+      "content_type": [
+        "contenttypes",
+        "contenttype"
+      ],
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change content type",
+      "content_type": [
+        "contenttypes",
+        "contenttype"
+      ],
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": [
+        "contenttypes",
+        "contenttype"
+      ],
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view content type",
+      "content_type": [
+        "contenttypes",
+        "contenttype"
+      ],
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add session",
+      "content_type": [
+        "sessions",
+        "session"
+      ],
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change session",
+      "content_type": [
+        "sessions",
+        "session"
+      ],
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete session",
+      "content_type": [
+        "sessions",
+        "session"
+      ],
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view session",
+      "content_type": [
+        "sessions",
+        "session"
+      ],
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add commander",
+      "content_type": [
+        "api",
+        "commander"
+      ],
+      "codename": "add_commander"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change commander",
+      "content_type": [
+        "api",
+        "commander"
+      ],
+      "codename": "change_commander"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete commander",
+      "content_type": [
+        "api",
+        "commander"
+      ],
+      "codename": "delete_commander"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view commander",
+      "content_type": [
+        "api",
+        "commander"
+      ],
+      "codename": "view_commander"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add competition",
+      "content_type": [
+        "api",
+        "competition"
+      ],
+      "codename": "add_competition"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change competition",
+      "content_type": [
+        "api",
+        "competition"
+      ],
+      "codename": "change_competition"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete competition",
+      "content_type": [
+        "api",
+        "competition"
+      ],
+      "codename": "delete_competition"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view competition",
+      "content_type": [
+        "api",
+        "competition"
+      ],
+      "codename": "view_competition"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add robot",
+      "content_type": [
+        "api",
+        "robot"
+      ],
+      "codename": "add_robot"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change robot",
+      "content_type": [
+        "api",
+        "robot"
+      ],
+      "codename": "change_robot"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete robot",
+      "content_type": [
+        "api",
+        "robot"
+      ],
+      "codename": "delete_robot"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view robot",
+      "content_type": [
+        "api",
+        "robot"
+      ],
+      "codename": "view_robot"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add robot category",
+      "content_type": [
+        "api",
+        "robotcategory"
+      ],
+      "codename": "add_robotcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change robot category",
+      "content_type": [
+        "api",
+        "robotcategory"
+      ],
+      "codename": "change_robotcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete robot category",
+      "content_type": [
+        "api",
+        "robotcategory"
+      ],
+      "codename": "delete_robotcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view robot category",
+      "content_type": [
+        "api",
+        "robotcategory"
+      ],
+      "codename": "view_robotcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add Token",
+      "content_type": [
+        "authtoken",
+        "token"
+      ],
+      "codename": "add_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change Token",
+      "content_type": [
+        "authtoken",
+        "token"
+      ],
+      "codename": "change_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete Token",
+      "content_type": [
+        "authtoken",
+        "token"
+      ],
+      "codename": "delete_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view Token",
+      "content_type": [
+        "authtoken",
+        "token"
+      ],
+      "codename": "view_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add token",
+      "content_type": [
+        "authtoken",
+        "tokenproxy"
+      ],
+      "codename": "add_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change token",
+      "content_type": [
+        "authtoken",
+        "tokenproxy"
+      ],
+      "codename": "change_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete token",
+      "content_type": [
+        "authtoken",
+        "tokenproxy"
+      ],
+      "codename": "delete_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view token",
+      "content_type": [
+        "authtoken",
+        "tokenproxy"
+      ],
+      "codename": "view_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$260000$8iOds6RGzLAvbFR8Jqgdc0$maqD+JfIGVv9DhwK3ioTN9Q4v22Zn0cd79Ab2qREAPQ=",
+      "last_login": "2021-10-18T11:09:17.470Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-10-17T19:49:54.553Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$260000$lbkpO6ecD3yMIFEfaAabgL$uWXUt1Eb/gGcjI7evfJb4gGfYREN7qVk+aH3X9SCU1E=",
+      "last_login": "2021-10-17T20:26:14.337Z",
+      "is_superuser": false,
+      "username": "user",
+      "first_name": "",
+      "last_name": "",
+      "email": "toluwalemisrael@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-10-17T19:52:41Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$260000$JbM2mWQST5KBkmG8RE3kf6$0mOzBNj1Vp0O6CVv4/t3WzWkk86lrAg1qqBqWRImOAY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "testuser",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-10-17T19:56:55Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$260000$wOyvWGHYrleIVxMQtE5wIF$QBERWqboJPflT/7rdDP6CtgIZr+eMYkB14eiCNEu//k=",
+      "last_login": "2021-10-17T20:32:41.947Z",
+      "is_superuser": true,
+      "username": "tolu",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-10-17T20:17:34.825Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authtoken.token",
+    "pk": "5852835d0e2fe94fa0780f3d23964455e1e58361",
+    "fields": {
+      "user": [
+        "tolu"
+      ],
+      "created": "2021-10-17T20:33:01.871Z"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2021-10-17T19:52:42.151Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "auth",
+        "user"
+      ],
+      "object_id": "2",
+      "object_repr": "user",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2021-10-17T19:52:57.910Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "auth",
+        "user"
+      ],
+      "object_id": "2",
+      "object_repr": "user",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2021-10-17T19:56:55.899Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "auth",
+        "user"
+      ],
+      "object_id": "3",
+      "object_repr": "testuser",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2021-10-17T19:57:01.315Z",
+      "user": [
+        "admin"
+      ],
+      "content_type": [
+        "auth",
+        "user"
+      ],
+      "object_id": "3",
+      "object_repr": "testuser",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2021-10-17T20:33:01.872Z",
+      "user": [
+        "tolu"
+      ],
+      "content_type": [
+        "authtoken",
+        "tokenproxy"
+      ],
+      "object_id": "4",
+      "object_repr": "5852835d0e2fe94fa0780f3d23964455e1e58361",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "api.robot",
+    "pk": 6,
+    "fields": {
+      "name": "Jarvis",
+      "robot_category": 3,
+      "manufacturing_date": "2021-10-17T16:50:00Z",
+      "has_it_competed": false,
+      "owner": [
+        "admin"
+      ],
+      "created": "2021-10-17T15:50:05.191Z",
+      "updated": "2021-10-17T15:50:05.191Z"
+    }
+  },
+  {
+    "model": "api.robot",
+    "pk": 7,
+    "fields": {
+      "name": "Ultron",
+      "robot_category": 1,
+      "manufacturing_date": "2021-10-15T16:50:00Z",
+      "has_it_competed": false,
+      "owner": [
+        "admin"
+      ],
+      "created": "2021-10-17T15:50:27.037Z",
+      "updated": "2021-10-17T15:50:27.037Z"
+    }
+  },
+  {
+    "model": "api.robot",
+    "pk": 8,
+    "fields": {
+      "name": "Siri",
+      "robot_category": 5,
+      "manufacturing_date": "2021-10-17T18:05:00Z",
+      "has_it_competed": true,
+      "owner": [
+        "admin"
+      ],
+      "created": "2021-10-17T17:06:03.460Z",
+      "updated": "2021-10-17T17:06:03.460Z"
+    }
+  },
+  {
+    "model": "api.robot",
+    "pk": 9,
+    "fields": {
+      "name": "Alexa",
+      "robot_category": 3,
+      "manufacturing_date": "2021-10-17T18:05:00Z",
+      "has_it_competed": true,
+      "owner": [
+        "admin"
+      ],
+      "created": "2021-10-17T17:06:15.377Z",
+      "updated": "2021-10-17T17:06:15.377Z"
+    }
+  },
+  {
+    "model": "api.robot",
+    "pk": 10,
+    "fields": {
+      "name": "XYZ",
+      "robot_category": 3,
+      "manufacturing_date": "2021-10-17T18:05:00Z",
+      "has_it_competed": true,
+      "owner": [
+        "admin"
+      ],
+      "created": "2021-10-17T17:06:23.972Z",
+      "updated": "2021-10-17T17:06:23.972Z"
+    }
+  },
+  {
+    "model": "api.robot",
+    "pk": 11,
+    "fields": {
+      "name": "Leo",
+      "robot_category": 2,
+      "manufacturing_date": "2021-10-17T18:05:00Z",
+      "has_it_competed": true,
+      "owner": [
+        "admin"
+      ],
+      "created": "2021-10-17T17:06:35.828Z",
+      "updated": "2021-10-17T17:06:35.828Z"
+    }
+  },
+  {
+    "model": "api.robot",
+    "pk": 12,
+    "fields": {
+      "name": "BD-123",
+      "robot_category": 5,
+      "manufacturing_date": "2021-10-17T18:15:00Z",
+      "has_it_competed": true,
+      "owner": [
+        "admin"
+      ],
+      "created": "2021-10-17T17:15:27.398Z",
+      "updated": "2021-10-17T20:22:15.583Z"
+    }
+  },
+  {
+    "model": "api.robot",
+    "pk": 13,
+    "fields": {
+      "name": "Joe",
+      "robot_category": 1,
+      "manufacturing_date": "2021-10-17T18:16:00Z",
+      "has_it_competed": false,
+      "owner": [
+        "admin"
+      ],
+      "created": "2021-10-17T17:15:49.179Z",
+      "updated": "2021-10-17T17:15:49.179Z"
+    }
+  },
+  {
+    "model": "api.robot",
+    "pk": 14,
+    "fields": {
+      "name": "Zombie",
+      "robot_category": 3,
+      "manufacturing_date": "2021-10-17T18:16:00Z",
+      "has_it_competed": false,
+      "owner": [
+        "admin"
+      ],
+      "created": "2021-10-17T17:16:51.993Z",
+      "updated": "2021-10-17T17:16:51.993Z"
+    }
+  },
+  {
+    "model": "api.robot",
+    "pk": 15,
+    "fields": {
+      "name": "Skibi",
+      "robot_category": 2,
+      "manufacturing_date": "2021-10-17T20:54:00Z",
+      "has_it_competed": false,
+      "owner": [
+        "admin"
+      ],
+      "created": "2021-10-17T19:54:07.524Z",
+      "updated": "2021-10-17T19:54:07.525Z"
+    }
+  }
+]

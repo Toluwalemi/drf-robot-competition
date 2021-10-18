@@ -1,0 +1,290 @@
+[
+    {
+        "codename": "add_logentry",
+        "content_type_id": 1,
+        "id": 1,
+        "name": "Can add log entry"
+    },
+    {
+        "codename": "change_logentry",
+        "content_type_id": 1,
+        "id": 2,
+        "name": "Can change log entry"
+    },
+    {
+        "codename": "delete_logentry",
+        "content_type_id": 1,
+        "id": 3,
+        "name": "Can delete log entry"
+    },
+    {
+        "codename": "view_logentry",
+        "content_type_id": 1,
+        "id": 4,
+        "name": "Can view log entry"
+    },
+    {
+        "codename": "add_permission",
+        "content_type_id": 2,
+        "id": 5,
+        "name": "Can add permission"
+    },
+    {
+        "codename": "change_permission",
+        "content_type_id": 2,
+        "id": 6,
+        "name": "Can change permission"
+    },
+    {
+        "codename": "delete_permission",
+        "content_type_id": 2,
+        "id": 7,
+        "name": "Can delete permission"
+    },
+    {
+        "codename": "view_permission",
+        "content_type_id": 2,
+        "id": 8,
+        "name": "Can view permission"
+    },
+    {
+        "codename": "add_group",
+        "content_type_id": 3,
+        "id": 9,
+        "name": "Can add group"
+    },
+    {
+        "codename": "change_group",
+        "content_type_id": 3,
+        "id": 10,
+        "name": "Can change group"
+    },
+    {
+        "codename": "delete_group",
+        "content_type_id": 3,
+        "id": 11,
+        "name": "Can delete group"
+    },
+    {
+        "codename": "view_group",
+        "content_type_id": 3,
+        "id": 12,
+        "name": "Can view group"
+    },
+    {
+        "codename": "add_user",
+        "content_type_id": 4,
+        "id": 13,
+        "name": "Can add user"
+    },
+    {
+        "codename": "change_user",
+        "content_type_id": 4,
+        "id": 14,
+        "name": "Can change user"
+    },
+    {
+        "codename": "delete_user",
+        "content_type_id": 4,
+        "id": 15,
+        "name": "Can delete user"
+    },
+    {
+        "codename": "view_user",
+        "content_type_id": 4,
+        "id": 16,
+        "name": "Can view user"
+    },
+    {
+        "codename": "add_contenttype",
+        "content_type_id": 5,
+        "id": 17,
+        "name": "Can add content type"
+    },
+    {
+        "codename": "change_contenttype",
+        "content_type_id": 5,
+        "id": 18,
+        "name": "Can change content type"
+    },
+    {
+        "codename": "delete_contenttype",
+        "content_type_id": 5,
+        "id": 19,
+        "name": "Can delete content type"
+    },
+    {
+        "codename": "view_contenttype",
+        "content_type_id": 5,
+        "id": 20,
+        "name": "Can view content type"
+    },
+    {
+        "codename": "add_session",
+        "content_type_id": 6,
+        "id": 21,
+        "name": "Can add session"
+    },
+    {
+        "codename": "change_session",
+        "content_type_id": 6,
+        "id": 22,
+        "name": "Can change session"
+    },
+    {
+        "codename": "delete_session",
+        "content_type_id": 6,
+        "id": 23,
+        "name": "Can delete session"
+    },
+    {
+        "codename": "view_session",
+        "content_type_id": 6,
+        "id": 24,
+        "name": "Can view session"
+    },
+    {
+        "codename": "add_commander",
+        "content_type_id": 7,
+        "id": 25,
+        "name": "Can add commander"
+    },
+    {
+        "codename": "change_commander",
+        "content_type_id": 7,
+        "id": 26,
+        "name": "Can change commander"
+    },
+    {
+        "codename": "delete_commander",
+        "content_type_id": 7,
+        "id": 27,
+        "name": "Can delete commander"
+    },
+    {
+        "codename": "view_commander",
+        "content_type_id": 7,
+        "id": 28,
+        "name": "Can view commander"
+    },
+    {
+        "codename": "add_competition",
+        "content_type_id": 8,
+        "id": 29,
+        "name": "Can add competition"
+    },
+    {
+        "codename": "change_competition",
+        "content_type_id": 8,
+        "id": 30,
+        "name": "Can change competition"
+    },
+    {
+        "codename": "delete_competition",
+        "content_type_id": 8,
+        "id": 31,
+        "name": "Can delete competition"
+    },
+    {
+        "codename": "view_competition",
+        "content_type_id": 8,
+        "id": 32,
+        "name": "Can view competition"
+    },
+    {
+        "codename": "add_robot",
+        "content_type_id": 9,
+        "id": 33,
+        "name": "Can add robot"
+    },
+    {
+        "codename": "change_robot",
+        "content_type_id": 9,
+        "id": 34,
+        "name": "Can change robot"
+    },
+    {
+        "codename": "delete_robot",
+        "content_type_id": 9,
+        "id": 35,
+        "name": "Can delete robot"
+    },
+    {
+        "codename": "view_robot",
+        "content_type_id": 9,
+        "id": 36,
+        "name": "Can view robot"
+    },
+    {
+        "codename": "add_robotcategory",
+        "content_type_id": 10,
+        "id": 37,
+        "name": "Can add robot category"
+    },
+    {
+        "codename": "change_robotcategory",
+        "content_type_id": 10,
+        "id": 38,
+        "name": "Can change robot category"
+    },
+    {
+        "codename": "delete_robotcategory",
+        "content_type_id": 10,
+        "id": 39,
+        "name": "Can delete robot category"
+    },
+    {
+        "codename": "view_robotcategory",
+        "content_type_id": 10,
+        "id": 40,
+        "name": "Can view robot category"
+    },
+    {
+        "codename": "add_token",
+        "content_type_id": 11,
+        "id": 41,
+        "name": "Can add Token"
+    },
+    {
+        "codename": "change_token",
+        "content_type_id": 11,
+        "id": 42,
+        "name": "Can change Token"
+    },
+    {
+        "codename": "delete_token",
+        "content_type_id": 11,
+        "id": 43,
+        "name": "Can delete Token"
+    },
+    {
+        "codename": "view_token",
+        "content_type_id": 11,
+        "id": 44,
+        "name": "Can view Token"
+    },
+    {
+        "codename": "add_tokenproxy",
+        "content_type_id": 12,
+        "id": 45,
+        "name": "Can add token"
+    },
+    {
+        "codename": "change_tokenproxy",
+        "content_type_id": 12,
+        "id": 46,
+        "name": "Can change token"
+    },
+    {
+        "codename": "delete_tokenproxy",
+        "content_type_id": 12,
+        "id": 47,
+        "name": "Can delete token"
+    },
+    {
+        "codename": "view_tokenproxy",
+        "content_type_id": 12,
+        "id": 48,
+        "name": "Can view token"
+    }
+]

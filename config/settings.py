@@ -157,8 +157,8 @@ REST_FRAMEWORK = {
         'rest_framework.versioning.NamespaceVersioning',
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema"
 }
-# if not DEBUG:
-#     REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = ("rest_framework.renderers.JSONRenderer",)
+if not DEBUG:
+    REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = ("rest_framework.renderers.JSONRenderer",)
 
 import dj_database_url
 

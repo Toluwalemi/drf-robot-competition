@@ -2,11 +2,13 @@ from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 
+from api.serializers import RobotCategorySerializer
 from api.views import RobotCategoryList, RobotList, CommanderList, CompetitionList
 
 
 class ApiRootVersion2(generics.GenericAPIView):
     name = 'api-root'
+    serializer_class = RobotCategorySerializer
 
     def get(self, request, *args, **kwargs):
         return Response({

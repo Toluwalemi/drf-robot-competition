@@ -107,6 +107,7 @@ class CompetitionDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class ApiRoot(generics.GenericAPIView):
     name = 'api-root'
+    serializer_class = RobotCategorySerializer
 
     def get(self, request, *args, **kwargs):
         return Response({

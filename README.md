@@ -13,6 +13,7 @@ grouped into robot categories.
 
 ## DOCUMENTATION
 * https://robot-competition.herokuapp.com/api/docs/
+* https://robot-competition.herokuapp.com/api/swagger-docs/
 
 ## RESTFUL ROUTES
 

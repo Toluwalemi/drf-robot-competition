@@ -15,9 +15,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework import permissions
+from rest_framework.documentation import include_docs_urls
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Robot Competition API",
+        default_version="v1",
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny,),
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path("api/swagger-docs/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
+    path("api/docs/", include_docs_urls(title="Movies API")),
+
     path('api/v1/', include('api.urls', namespace='v1')),
     path('api/v2/', include('api.v2.urls', namespace='v2')),
     path('v1/api-auth/', include('rest_framework.urls', namespace='rest_framework.urls')),

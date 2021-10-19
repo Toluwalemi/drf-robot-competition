@@ -1,4 +1,6 @@
 # Create your views here.
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
 from rest_framework import generics, permissions
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
@@ -22,6 +24,14 @@ class RobotCategoryList(generics.ListCreateAPIView):
     ordering_fields = ('name',)
 
 
+@swagger_auto_schema(
+    request_body=openapi.Schema(
+        type=openapi.TYPE_OBJECT,
+        properties={
+            "name": openapi.Schema(type=openapi.TYPE_STRING),
+        },
+    )
+)
 class RobotCategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = RobotCategory.objects.all()
     serializer_class = RobotCategorySerializer

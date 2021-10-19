@@ -11,6 +11,9 @@ grouped into robot categories.
 * Versioning Management
 * Tests
 
+## DOCUMENTATION
+* https://robot-competition.herokuapp.com/api/docs/
+
 ## RESTFUL ROUTES
 
 ```text
@@ -70,3 +73,4 @@ grouped into robot categories.
 ```
  python manage.py runserver
 ```
+
